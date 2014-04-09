@@ -112,8 +112,6 @@
 		462A9A5318F45A74006246C9 /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
-				462A9A5C18F45A74006246C9 /* ATAppDelegate.h */,
-				462A9A5D18F45A74006246C9 /* ATAppDelegate.m */,
 				462A9A5F18F45A74006246C9 /* Main.storyboard */,
 				462A9A6218F45A74006246C9 /* ATViewController.h */,
 				462A9A6318F45A74006246C9 /* ATViewController.m */,
@@ -126,6 +124,8 @@
 		462A9A5418F45A74006246C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				462A9A5C18F45A74006246C9 /* ATAppDelegate.h */,
+				462A9A5D18F45A74006246C9 /* ATAppDelegate.m */,
 				462A9A5518F45A74006246C9 /* CrystalBall-Info.plist */,
 				462A9A5618F45A74006246C9 /* InfoPlist.strings */,
 				462A9A5918F45A74006246C9 /* main.m */,
@@ -457,6 +457,7 @@
 				462A9A7E18F45A74006246C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462A9A7F18F45A74006246C9 /* Build configuration list for PBXNativeTarget "CrystalBallTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				462A9A8118F45A74006246C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
