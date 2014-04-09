@@ -30,14 +30,6 @@
     
 }
 
-//- (void) viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    
-//    CGRect frame = self.predictionLabel.frame;
-//    self.predictionLabel.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
-//
-//}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -45,8 +37,8 @@
 }
 
 - (IBAction)buttonPressed {
-    
-    self.predictionLabel.text = [self.predictions objectAtIndex:3];
+    int random = arc4random_uniform(self.predictions.count);
+    self.predictionLabel.text = [self.predictions objectAtIndex:random];
 }
 
 @end
