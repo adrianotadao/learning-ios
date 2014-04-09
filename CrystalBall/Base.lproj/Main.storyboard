@@ -16,17 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is dicidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-4C-K3f">
-                                <rect key="frame" x="34" y="181" width="243" height="138"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6Pp-GR-KEu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is dicidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-4C-K3f">
+                                <rect key="frame" x="39" y="180" width="243" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="D5S-CF-UgN"/>
+                                    <constraint firstAttribute="height" constant="138" id="tDB-4L-x4A"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6A-7z-VR7">
-                                <rect key="frame" x="20" y="488" width="261" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6A-7z-VR7">
+                                <rect key="frame" x="29" y="488" width="261" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="BDq-Vo-j3D"/>
+                                    <constraint firstAttribute="width" constant="261" id="JJg-A0-L2B"/>
+                                </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="button-off">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +50,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Pp-GR-KEu" firstAttribute="centerX" secondItem="tvR-4C-K3f" secondAttribute="centerX" constant="-0.5" id="2cS-T7-Rq6"/>
+                            <constraint firstItem="6Pp-GR-KEu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="3vW-K7-W0y"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6Pp-GR-KEu" secondAttribute="bottom" id="S65-CF-Bbu"/>
+                            <constraint firstAttribute="centerX" secondItem="y6A-7z-VR7" secondAttribute="centerX" id="dtW-1X-MGU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="y6A-7z-VR7" secondAttribute="bottom" constant="31" id="dwf-uT-xa4"/>
+                            <constraint firstItem="6Pp-GR-KEu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iwQ-nA-bxE"/>
+                            <constraint firstItem="6Pp-GR-KEu" firstAttribute="centerY" secondItem="tvR-4C-K3f" secondAttribute="centerY" constant="35" id="vBa-41-BI4"/>
+                            <constraint firstAttribute="trailing" secondItem="6Pp-GR-KEu" secondAttribute="trailing" id="wbz-0l-6gp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="predictionLabel" destination="tvR-4C-K3f" id="dAj-dO-vgn"/>
@@ -48,6 +70,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="320" height="568"/>
         <image name="button-off" width="261" height="49"/>
         <image name="button-on" width="261" height="47"/>
     </resources>
