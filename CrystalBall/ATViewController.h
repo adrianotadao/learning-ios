@@ -13,6 +13,7 @@
 @interface ATViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) ATCrystalBall *crystalBall;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 - (void) makePrediction;
 
