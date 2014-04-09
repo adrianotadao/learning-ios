@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ATCrystalBall;
+
 @interface ATViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
-@property (strong, nonatomic) NSArray *predictions;
+@property (strong, nonatomic) ATCrystalBall *crystalBall;
 
 - (IBAction)buttonPressed;
 

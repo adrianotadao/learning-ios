@@ -7,6 +7,7 @@
 //
 
 #import "ATViewController.h"
+#import "ATCrystalBall.h"
 
 @interface ATViewController ()
 
@@ -17,16 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.predictions = [[NSArray alloc] initWithObjects:@"It is Certain",
-                        @"It is Decidedly so",
-                        @"All signs say YES",
-                        @"The starts are not aligned",
-                        @"My reply is no",
-                        @"It is doubtful",
-                        @"Better not tell you know",
-                        @"Concentrate and ask again",
-                        @"Unable to answer now", nil];
+    self.crystalBall = [[ATCrystalBall alloc] init];
     
 }
 
@@ -37,8 +29,7 @@
 }
 
 - (IBAction)buttonPressed {
-    int random = arc4random_uniform(self.predictions.count);
-    self.predictionLabel.text = [self.predictions objectAtIndex:random];
+    self.predictionLabel.text = [self.crystalBall randomPrediction];
 }
 
 @end

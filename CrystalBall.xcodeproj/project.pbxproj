@@ -21,6 +21,7 @@
 		462A9A6F18F45A74006246C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A9A5118F45A74006246C9 /* UIKit.framework */; };
 		462A9A7718F45A74006246C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 462A9A7518F45A74006246C9 /* InfoPlist.strings */; };
 		462A9A7918F45A74006246C9 /* CrystalBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 462A9A7818F45A74006246C9 /* CrystalBallTests.m */; };
+		46B3012518F4E46400CE0C3F /* ATCrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B3012418F4E46400CE0C3F /* ATCrystalBall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		462A9A7418F45A74006246C9 /* CrystalBallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrystalBallTests-Info.plist"; sourceTree = "<group>"; };
 		462A9A7618F45A74006246C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		462A9A7818F45A74006246C9 /* CrystalBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrystalBallTests.m; sourceTree = "<group>"; };
+		46B3012318F4E46400CE0C3F /* ATCrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCrystalBall.h; sourceTree = "<group>"; };
+		46B3012418F4E46400CE0C3F /* ATCrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCrystalBall.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				462A9A6318F45A74006246C9 /* ATViewController.m */,
 				462A9A6518F45A74006246C9 /* Images.xcassets */,
 				462A9A5418F45A74006246C9 /* Supporting Files */,
+				46B3012318F4E46400CE0C3F /* ATCrystalBall.h */,
+				46B3012418F4E46400CE0C3F /* ATCrystalBall.m */,
 			);
 			path = CrystalBall;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B3012518F4E46400CE0C3F /* ATCrystalBall.m in Sources */,
 				462A9A5A18F45A74006246C9 /* main.m in Sources */,
 				462A9A6418F45A74006246C9 /* ATViewController.m in Sources */,
 				462A9A5E18F45A74006246C9 /* ATAppDelegate.m in Sources */,
