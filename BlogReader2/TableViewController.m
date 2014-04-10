@@ -26,15 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.titles = [NSArray arrayWithObjects:@"Getting started with WordPress",	@"Whitespace in Web Design: What It Is and Why You Should Use It",
-                   @"Adaptive Images and Responsive SVGs - Treehouse Show Episode 15",
-                   @"Productivity is About Constraints and Concentration",
-                   @"A Guide to Becoming the Smartest Developer on the Planet",
-                   @"Teacher Spotlight: Zac Gordon",
-                   @"Do You Love What You Do?",
-                   @"Applying Normalize.css Reset - Quick Tip",
-                   @"How I Wrote a Book in 3 Days",
-                   @"Responsive Techniques, JavaScript MVC Frameworks, Firefox 16 | Treehouse Show Episode 14", nil];
+    
+    NSDictionary *blockPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"The Missing Widget in Android",@"title",@"Ben Jakuben", @"author", nil];
+    NSDictionary *blockPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Getting started with iOS Development",@"title",@"Amit Bjlani", @"author", nil];
+    NSDictionary *blockPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"An Interview with Shay Howe",@"title",@"Joe Villanueva", @"author", nil];
+    
+    self.blogPosts = [NSArray arrayWithObjects:blockPost1, blockPost2, blockPost3, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +51,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.titles count];
+    return [self.blogPosts count];
 }
 
 
@@ -62,7 +59,11 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
+    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [blogPost valueForKey:@"title"];
+    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+    
     return cell;
 }
 
