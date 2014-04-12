@@ -73,10 +73,14 @@
     
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     
-    NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
-    UIImage *image = [UIImage imageWithData:imageData];
-    
-    cell.imageView.image = image;
+    if ([blogPost.thumbnail isKindOfClass:[NSString class]]){
+        NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+        UIImage *image = [UIImage imageWithData:imageData];
+        
+        cell.imageView.image = image;
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+    }
     cell.textLabel.text = blogPost.title;
     cell.detailTextLabel.text = blogPost.author;
     
