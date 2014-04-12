@@ -83,7 +83,7 @@
         cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
     }
     cell.textLabel.text = blogPost.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", blogPost.author, blogPost.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", blogPost.author, [blogPost formattedDate]];
     
     return cell;
 }

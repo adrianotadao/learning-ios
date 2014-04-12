@@ -19,5 +19,6 @@
 + (id) blogPostWithTitle:(NSString *) title;
 
 - (NSURL *) thumbnailURL;
+- (NSString *) formattedDate;
 
 @end
