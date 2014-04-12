@@ -27,11 +27,12 @@
 {
     [super viewDidLoad];
     
-    NSDictionary *blockPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"The Missing Widget in Android",@"title",@"Ben Jakuben", @"author", nil];
-    NSDictionary *blockPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Getting started with iOS Development",@"title",@"Amit Bjlani", @"author", nil];
-    NSDictionary *blockPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"An Interview with Shay Howe",@"title",@"Joe Villanueva", @"author", nil];
+    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
+    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
+    NSError *error = nil;
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    self.blogPosts = [NSArray arrayWithObjects:blockPost1, blockPost2, blockPost3, nil];
+    self.blogPosts = [dataDictionary objectForKey:@"posts"];
 }
 
 - (void)didReceiveMemoryWarning
