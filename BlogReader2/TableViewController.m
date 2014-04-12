@@ -28,18 +28,21 @@
 {
     [super viewDidLoad];
     
-    BlogPost *bp = [[BlogPost alloc] initWithTitle:@"some title"];
-    bp.author = @"Author";
-    
-    BlogPost *bp1 = [BlogPost blogPostWithTitle:@"another tithe"];
-    bp1.author = @"Author 2"
-    ;
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
     NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
     NSError *error = nil;
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+
+    self.blogPosts = [NSMutableArray array];
     
-    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    NSArray *blogPostsArray = [dataDictionary objectForKey:@"posts"];
+    
+    for (NSDictionary *bpDictionary in blogPostsArray) {
+        BlogPost *blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
+        blogPost.author = [bpDictionary objectForKey:@"author"];
+
+        [self.blogPosts addObject:blogPost];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,10 +70,10 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [blogPost valueForKey:@"title"];
-    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+    cell.textLabel.text = blogPost.title;
+    cell.detailTextLabel.text = blogPost.author;
     
     return cell;
 }
