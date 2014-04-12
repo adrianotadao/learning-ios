@@ -20,14 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It is dicidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-4C-K3f">
-                                <rect key="frame" x="39" y="206" width="243" height="133"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is dicidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="242" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-4C-K3f">
+                                <rect key="frame" x="39" y="201" width="242" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="243" id="D5S-CF-UgN"/>
-                                    <constraint firstAttribute="height" constant="138" id="tDB-4L-x4A"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -35,11 +31,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Pp-GR-KEu" firstAttribute="centerX" secondItem="tvR-4C-K3f" secondAttribute="centerX" constant="-0.5" id="2cS-T7-Rq6"/>
                             <constraint firstItem="6Pp-GR-KEu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="3vW-K7-W0y"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6Pp-GR-KEu" secondAttribute="bottom" id="S65-CF-Bbu"/>
                             <constraint firstItem="6Pp-GR-KEu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iwQ-nA-bxE"/>
-                            <constraint firstItem="6Pp-GR-KEu" firstAttribute="centerY" secondItem="tvR-4C-K3f" secondAttribute="centerY" constant="35" id="vBa-41-BI4"/>
                             <constraint firstAttribute="trailing" secondItem="6Pp-GR-KEu" secondAttribute="trailing" id="wbz-0l-6gp"/>
                         </constraints>
                     </view>
