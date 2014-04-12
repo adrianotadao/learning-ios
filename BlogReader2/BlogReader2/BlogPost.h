@@ -13,6 +13,7 @@
 @property (atomic, strong) NSString *title;
 @property (nonatomic, strong) NSString * author;
 @property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, strong) NSString *date;
 
 - (id) initWithTitle:(NSString *) title;
 + (id) blogPostWithTitle:(NSString *) title;
