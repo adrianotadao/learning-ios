@@ -31,7 +31,7 @@
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
     NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
     NSError *error = nil;
-    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];    
 
     self.blogPosts = [NSMutableArray array];
     
@@ -42,7 +42,7 @@
         blogPost.author = [bpDictionary objectForKey:@"author"];
         blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
         blogPost.date = [bpDictionary objectForKey:@"date"];
-
+        blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
         [self.blogPosts addObject:blogPost];
     }
 }
